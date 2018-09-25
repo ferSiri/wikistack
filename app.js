@@ -9,7 +9,7 @@ const app= express();
 
 app.use(morgan('tiny'));
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(__dirname+ '/public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
