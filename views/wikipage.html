@@ -2,10 +2,12 @@
 
 {% block content %}
   <h3>{{data.title}} <small> (<a href='{{data.urlTitle}}'>{{data.urlTitle}}</a>)</small></h3>
-  <h4>by <a href="PLACEHOLDER-AUTHOR-URL">PLACEHOLDER AUTHOR NAME</a></h4>
+  <h4>by <a href="http://localhost:3000/users/{{data.author.id}}">{{data.author.name}}</a></h4>
   <div>PLACEHOLDER TAG LIST</div>
   <hr/>
-  <div>PLACEHOLDER AUTHOR NAME WITH LINK TO AUTHOR PAGE</div>
+  <div>
+    <h2>Autor:<a href="http://localhost:3000/users/{{data.author.id}}">{{data.author.name}}</a></h2>
+  </div>
   <div class="page-body">{{data.content}}</div>
   <hr/>
   <a href="PLACEHOLDER_URL_TITLE/edit" class="btn btn-primary">edit this page</a>

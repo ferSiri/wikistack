@@ -43,7 +43,8 @@ router.get('/:urlTitle', function(req, res, next){
     Page.findOne({
         where: {
           urlTitle: req.params.urlTitle
-        }
+        },
+        include: [{model: User, as: 'author'}]
       }).then(function(data){res.render('wikipage',{data: data})}).catch(next);
 });
 
