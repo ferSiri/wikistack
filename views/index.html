@@ -4,6 +4,10 @@
   <h3>Pages</h3>
   <hr>
   <ul class="list-unstyled">
-    <!-- PLACEHOLDER LIST OF PAGES -->
+    
+      {% for page in data %}
+        <li><a href="http://localhost:3000/wiki/{{page.urlTitle}}">{{page.title}}</a></li>
+      {% endfor %}
+   
   </ul>
 {% endblock %}
